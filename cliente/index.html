@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    input, select{
+        margin-bottom: 5px;
+    }
+    label{
+        margin-bottom: 8px;
+    }
+    .checkBox{
+        margin-top: 5px;
+    }
+    #vFullName,
+    #vAlias,
+    #vRut,
+    #vEmail,
+    #vCheckBox {
+        display: none;
+    }
+  </style>
+  <body>
+    <h1>FORMULARIO DE VOTACION:</h1>
+    <form id="form" action="">
+        <div style="display: flex; ">
+            <div style="display: flex; flex-direction: column;">
+                <label for="">Nombre y Apellido</label>
+                <label for="">Alias</label>
+                <label for="">RUT</label>
+                <label for="">Email</label>
+                <label for="">Región</label>
+                <label for="">Comuna</label>
+                <label for="">Candidato</label>
+                <label for="lhowMetUs">Como se enteró de Nosotros</label>
+               
+            </div>
+            <div style="display: flex; flex-direction: column; margin-left: 50px;">
+                <input type="text" id="fullName">
+                <input type="text" id="alias">
+                <input type="text" placeholder="11111111-1" id="rut">
+                <input type="text" id="email">
+                <select name="region" onchange="comunas()" id="region"></select>
+                <select name="comuna" id="comuna"></select>
+                <select name="candidato" id="candidato"></select>
+                <div class="checkBox"> 
+                    <label for="c1"><input name="web" id="c1" type="checkbox"> Web</label> 
+                    <label for="c2"><input name="tv" id="c2" type="checkbox">TV</label> 
+                    <label for="c3"><input name="redes Sociales" id="c3" type="checkbox">Redes Sociales</label> 
+                    <label for="c4"><input name="amigo" id="c4" type="checkbox">Amigo</label> 
+                </div>
+              
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column;">
+            <label id="vFullName" for="">* se requiere el nombre y apellido</label>
+            <label id="vAlias" for="">* se requiere el alias</label>
+            <label id="vRut" for="">* El rut no es valido</label>
+            <label id="vEmail" for="">* El email no es valido</label>
+            <label id="vCheckBox" for="">* Seleccionar mas de dos casillas en la sección como se enteró sobre nosotros</label>
+        </div>
+        <label for=""></label>
+        <button type="button" onclick="submitEve()" >Votar</button>
+    </form>
+</form>
+<script src="./js/utils.js"></script>
+<script src="./js/inicializador.js"></script>
+<script src="./js/validacion.js"></script>
+
+
+  </body>
+</html>
